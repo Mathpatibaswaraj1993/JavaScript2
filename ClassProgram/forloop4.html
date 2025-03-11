@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            width: 900px;
+            height: 30px;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let fno =parseInt(prompt("Enter First Number"))
+        let lno =parseInt(prompt("Enter last Number"))
+       let mul;
+
+
+        document.write("<table>")
+            for(let i=fno;i<=lno;i++)
+            {
+
+                if(i%2==0)
+            {
+                document.write("<tr style='background-color:white'>")
+                    for (let j=1;j<=10;j++)
+                {
+                    mul=i*j
+                    document.write(`<td>${j}*${i}=${mul}</td>`)
+                }
+                document.write("</tr>")
+            }
+            else{
+                document.write("<tr style='background-color:black;color:white'>")
+                    for(let j=1;j<=10;j++)
+                    {
+                    mul=i*j
+                    document.write(`<td>${j}*${i}=${mul}</td>`)
+                }
+            }
+        }
+        document.write("</table")
+    </script>
+</body>
+</html>

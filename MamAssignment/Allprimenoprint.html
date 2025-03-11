@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(num) {
+    if (num < 2) return false; // Numbers less than 2 are not prime
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false; // Not prime if divisible by any number other than 1 and itself
+    }
+    return true;
+}
+
+function printPrimesInRange(start, end) {
+    for (let i = start; i <= end; i++) {
+        if (isPrime(i)) {
+            console.log(i); // Print prime numbers
+        }
+    }
+}
+
+// Example usage:
+printPrimesInRange(20, 100); // Adjust the range as needed
+
+    </script>
+</body>
+</html>

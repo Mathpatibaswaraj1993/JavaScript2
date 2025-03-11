@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function counting(number) {
+    let count = 0;
+    for (let n = number; n > 0; n = Math.floor(n / 10)) {
+        count++;
+    }
+    return count;
+}
+
+let num = 123456789;
+let result = counting(num);
+console.log(`Number of digits in ${num}: ${result}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+//wap enter basic salary from user and print net salary but follow condition:
+
+// if bs >10000 then company will give 10% HRA of bs ,8% TA of bs bonus * 10000 otherwise
+//HRA 5% of bs ,TA -5000 ,bonus -5000
+// find out net salary --net salary =bs + hra + ta + bonus
+let bs =parseInt(prompt("Enter basic salary"))
+
+let hra
+let ta 
+let netsal
+let bonus
+
+if(bs>=10000)
+{
+    hra =bs*10/100
+    ta = bs* 8/100
+    bonus=10000
+}
+
+else{
+   hra=bs*5/100
+   ta=5000
+   bonus=5000
+}
+netsal =bs + hra + ta
+console.log(`Bs:-${bs} HRA:-${hra} TA:-${ta} Bonus:-${bonus} netsal:-${netsal}`);
+
+
+
+</script>
+
+
+
+
+
+    
+</body>
+</html>

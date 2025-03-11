@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function printMultiplicationTables(start, end, upTo = 10) {
+        let start=parseInt(prompt("Enter The start"))
+        let end=parseInt(prompt("Enter The end"))
+        let upTo=10;
+        let mul;
+         document.write(`<tr>`)
+       for (let i = start; i <= end; i++) {
+        document.write(`<table border=2 width='900px' cellpadding=4> Multiplication Table for ${i}:  `);
+
+        for (let j = 1; j <= upTo; j++) {
+            // mul=i*i
+            document.write(`<td>${i} * ${j}  =  ${i * j}</td>`);
+        }
+        document.write(`</tr></table><br>`); // Blank line for better readability
+
+}
+// }
+
+// // Example usage:
+// let start = 2, end = 5; // Change range as needed
+// printMultiplicationTables(start, end);
+
+    </script>
+</body>
+</html>

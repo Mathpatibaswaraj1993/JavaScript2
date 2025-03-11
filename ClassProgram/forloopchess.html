@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* table,tr,td{
+            width: 600px;
+            height: 600px;
+            border: 3px solid black;
+        } */
+    </style>
+</head>
+<body>
+    <script>
+            
+            const size = 8; // Size of the chessboard
+let board = "<table border='1' cellspacing='0' cellpadding='10'>";
+
+for (let i = 0; i < size; i++) {
+    board += "<tr>";
+    for (let j = 0; j < size; j++) {
+        let color = (i + j) % 2 === 0 ? "black" : "white";
+        board += `<td style='width:30px; height:30px; background-color:${color};'></td>`;
+    }
+    board += "</tr>";
+}
+
+board += "</table>";
+document.body.innerHTML = board;
+
+</script>
+</body>
+</html>

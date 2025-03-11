@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let boxes=parseInt(prompt("Enter Range"))
+        document.write("<table border=2 width='900px' height='80px' cellpadding=4>")
+            document.write("<tr>")
+            for(let i=1;i<=boxes;i++)
+            if(i%2 == 0)
+            {
+                  document.write("<td style='background-color:white'></td>") 
+            }
+            else
+        {
+            document.write("<td style='background-color:Black'></td>") 
+
+        }
+        document.write("</tr></table>")
+    </script>
+</body>
+</html>

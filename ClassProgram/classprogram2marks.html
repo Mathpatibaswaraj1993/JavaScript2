@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let math =parseInt(prompt("Enter a Math marks:"))
+        let phy =parseInt(prompt("Enter a Phy marks:"))
+        let chm =parseInt(prompt("Enter a chm marks:"))
+        let total = math + phy + chm
+        // let marks;
+
+        if (math>=65 && phy>=55 && chm>=50  && total>180)
+        {
+            document.write(`You are Eligible ! ${total}`)
+        }
+        else 
+        {
+            document.write(`You Are Not Eligible`)
+        }
+       
+
+    </script>
+</body>
+</html>

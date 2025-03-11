@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //WAP to accept 2 no and 1 operator from user and print corrosponding operation 
+
+        // ex num1=3 num2=4 opr=/
+
+        let n1 = parseInt(prompt("enter number 1 "))
+
+        let n2 = parseInt(prompt("enter number 2 "))
+
+        let opr= prompt("Enter any operator")
+
+       if(opr == "+"){
+       console.log(n1+n2)
+    }
+
+    else if(opr =="-"){
+        console.log(n1-n2)
+    }
+    
+    else if(opr =="*"){
+        console.log(n1*n2)
+    }
+    
+    else if(opr =="/"){
+        console.log(n1/n2)
+    }
+    else{
+        console.log("Invalid Operator")
+    }
+    </script>
+</body>
+</html>
