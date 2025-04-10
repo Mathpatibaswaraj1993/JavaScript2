@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function atm(amount, balance)
+        {
+        //  let amount,balance;
+      
+
+         if(amount <= balance)
+         {
+            console.log("Withdrwal Successful!!")
+            return balance-amount;
+         }
+         else{
+            console.log("Insufficient Funds!")
+            return balance
+         }
+        }
+       const accountbalance = 1000;
+       
+
+          atm(accountbalance,2200)
+          atm(accountbalance,100)
+
+      // atm(accountbalance,1200)
+
+    </script>
+</body>
+</html>

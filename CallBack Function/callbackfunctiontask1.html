@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="para"></h3>
+    <h3 id="para1"></h3>
+    <h3 id="para2"></h3>
+  <!--   create 3 callbacks function name as power(),multiply(),division() and print result in javascript -->
+    <script>
+    function display(msg)
+    {
+        document.getElementById("para").innerHTML=msg
+    }
+
+    function display1(msg1)
+    {
+        document.getElementById("para1").innerHTML=msg1
+    }
+    function display2(msg2)
+    {
+        document.getElementById("para2").innerHTML=msg2
+    }
+
+     function power(a,b,mycallback)
+     {
+                    return a**b 
+                     mycallback(a,b)
+
+     }
+
+     let base
+     let exponent     
+   let result= (power(2,3,display))
+   console.log(result)
+
+   function multiply(a,b,mycallback1)
+   {
+      return a*b
+      mycallback1(a,b)
+   }
+
+   let a,b;
+   let result1=(multiply(2,5,display1))
+   console.log(result1)
+
+   function division(c,d,mycallback2)
+   {
+   return c/d
+   mycallback2(c,d)
+   }
+
+   let c,d;
+   let result2=(division(10,6,display2))
+   console.log(result2)
+   display(result2)
+    </script>
+</body>
+</html>

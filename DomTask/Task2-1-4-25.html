@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()"> Add elements</button>
+    <button onclick="remove()"> remove elements</button>
+
+    <script>
+
+        let div
+function add()
+{ 
+
+
+     div = document.createElement("div")
+    div.innerHTML="This is div"
+    
+    div.setAttribute("id","p1")
+
+
+    let para = document.createElement("p")
+    para.innerText="This is Paragraph"
+
+    let head = document.createElement("h1")
+    head.innerHTML="This is Heading"
+
+    let img = document.createElement("img")
+     img.src="/Images/cappuccinocoffee.jpeg"    
+
+     div.appendChild(para)
+     div.appendChild(head)
+     div.appendChild(img)
+
+     document.body.appendChild(div)
+}
+
+function remove()
+{
+   let rem = document.getElementById("p1")
+   rem.remove()
+}
+    </script>
+</body>
+</html>

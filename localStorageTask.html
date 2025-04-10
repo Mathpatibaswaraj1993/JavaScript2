@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h1"></h1>
+    <form name="form1" id="form1">
+
+             <table>
+<tr>
+    <td>UserName:
+        <input type="text" name="f1"> 
+    </td>
+</tr>
+<tr>
+    <td>Password:
+        <input type="text" name="f2">
+    </td>
+</tr>
+             <tr>
+                <td></td>
+                <td><button type="button" name="Login" onclick="fun()">Login</button></td>
+             </tr>
+            </table>        
+
+
+                        <script>
+                    localStorage.setItem("UserName","admin")
+                    localStorage.setItem("Password","admin123")
+ 
+                   function fun()
+                   {
+                       let un = form1.f1.value
+                       let pass = form1.f2.value
+
+                       if(un == localStorage.getItem("UserName") && pass ==  localStorage.getItem("Password"))
+                       {
+                            document.getElementById("h1").innerHTML="Login Successfull" 
+                            document.getElementById("form1").style.visibility="hidden"
+                    }
+                     else{
+                        document.getElementById("h1").innerHTML="userName and password incorrect!"         
+                                  }
+                   }
+
+
+
+                        </script>
+    </form>
+    
+</body>
+</html>

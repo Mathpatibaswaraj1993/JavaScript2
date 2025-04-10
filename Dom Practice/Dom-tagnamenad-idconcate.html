@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript HTML DOM</h2>
+
+    <p>Finding HTML Elements by Query Selector</p>
+    <p class="intro">Hello World !</p>
+    <p class="intro">This Example demonstrates The <b>Query Selector All </b>method.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let para = document.querySelectorAll("p.intro");
+        document.getElementById("demo").innerHTML=`The First paragraph (index 0) with class="intro" is :   ${para[1].innerHTML};`
+    </script>
+</body>
+</html>

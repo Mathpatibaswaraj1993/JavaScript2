@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            width: 100px;
+            height:100px;
+            border: 3px solid pink;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+<button onclick="start()">Start</button>
+
+<button onclick="stop()">Stop</button>
+<h3 id="hed"></h3>
+
+
+    </div>
+    <script>
+        let interval
+   const start=()=>{
+
+    interval= setInterval(show,1000)
+   
+        // let cdate = new Date().toLocaleDateString()
+        // let ctime = new Date().toDateString()
+        // document.write(`${ctime} and ${cdate}`)
+   }
+
+   function show()
+   {
+      let ctime = new Date().toLocaleTimeString()
+      hed.innerHTML=ctime
+   }
+
+   function stop()
+   {
+    clearInterval(interval)
+   }
+    </script>
+</body>
+</html>

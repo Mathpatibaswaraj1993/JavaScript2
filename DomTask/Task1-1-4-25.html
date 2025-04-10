@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun()">Creates Colors ordered List</button>
+  <ol id="list1"></ol>
+    <script>
+
+        let count =0;
+        function fun()
+        {
+            if(count < 10)
+        {
+
+       
+            let color = prompt("Enter color Name")
+            
+            let newol = document.getElementById("list1")
+            let newli = document.createElement("li")
+             newli.innerText=color;
+             newol.appendChild(newli)
+             document.body.appendChild(newol)
+             count++
+            }
+
+        else{
+            alert("limit is exceed you can not  add more color ")
+        }
+
+
+
+
+
+        }
+    </script>
+</body>
+</html>

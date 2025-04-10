@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table
+        {
+            border: 3px solid black;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            padding: 20px;
+            align-items: center;
+            background-color: aqua;
+            border-radius: 10px;
+
+        }
+      td h3{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin-left: 0px;
+             text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form name="f1" action="Task2-Login.html" onsubmit="return submitHandler()">
+        <table>
+            <tr>
+                <td><h3>Registration Form</h3></td>
+            </tr>
+            <tr>
+                <td> First Name:</td>
+                <td><input type="text" name="fname" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err1"></td>
+            </tr>
+
+            <tr>
+                <td> Last Name:</td>
+                <td><input type="text" name="lname" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err2"></td>
+            </tr>
+
+            <tr>
+                <td> Password:</td>
+                <td><input type="password" name="password" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err3"></td>
+            </tr>
+
+
+            <tr>
+                <td> Confirm Password:</td>
+                <td><input type="password" name="cpassword" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err4"></td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" name="g1">
+                <input type="radio" name="g1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err5"></td>
+            </tr>
+
+            <tr>
+                <td> Hobbies:</td>
+                <td><input type="checkbox" name="chkbox">Swmming
+                    <input type="checkbox" name="chkbox">Reading
+                    <input type="checkbox" name="chkbox">Dancing
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err6"></td>
+            </tr>
+
+            <tr>
+                <td>City:
+                    <select id="dropdown" name="cities">
+                        <option>Select City</option>
+                      <option>Pune</option>
+                      <option>Mumbai</option>
+                      <option>Delhi</option>
+                      <option>Goa</option>
+                      <option>Bengaluru</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td id="err7"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit"></td>
+            </tr>
+
+
+        </table>
+    </form>
+    <script>
+      function submitHandler()
+      {
+        let fname = f1.fname.value
+        let lname = f1.lname.value
+
+        if(fname ==="")
+      {
+        err1.innerHTML ="<span style'color:red'>Enter First Name</span>"
+        return false
+      }
+      else{
+        err1.innerHTML=""
+      }
+      
+
+      if(lname ==="")
+      {
+        err2.innerHTML ="<span style'color:red'>Enter Last Name</span>"
+        return false
+      }
+      else{
+        err2.innerHTML=""
+      }
+
+      }
+    
+    </script>
+
+</body>
+</html>

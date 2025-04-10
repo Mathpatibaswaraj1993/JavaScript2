@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function evenoroddNumber(){
+    
+    let num = parseInt(prompt("Enter a number between 1 and 30:"));
+
+    if (num >= 1 && num <= 30) {
+        for (let i = 1; i <= num; i++) {
+            if (i % 2 === 0) {
+                console.log(i + " is even");
+            } else {
+                console.log(i + " is odd");
+            }
+        }
+    } else {
+        console.log("Please enter a number between 1 and 30.");
+    }
+    
+}  
+ evenoroddNumber()
+    </script>
+</body>
+</html>

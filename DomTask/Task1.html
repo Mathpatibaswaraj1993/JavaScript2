@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Javascript is scripting language</p>
+   <img id="img1" class="c1" src="/Images/Americanocoffee.jpeg" >
+    <p id="p2">Css is cascading stylesheet</p>
+<img id="img2" class="c1" src="/Images/cappuccinocoffee.jpeg">
+    <p id="p3">React is Front end Technology</p>
+    <img id="img3"  class="c1" src="/Images/starbucks2coffee.jpeg">
+
+    <button onclick="fun()">Change all para innerHTML</button>
+    <button onclick="fun1()">Change width of all images</button>
+    <button onclick="fun2()">New para last image </button>
+
+
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+
+<script>
+    function fun()
+    {
+          let para = p1.innerHTML
+          let para1 = p2.innerHTML
+          let para2=p3.innerHTML
+
+          p1.innerHTML="Welcome to Javascript"
+          p2.innerHTML="Css is style Code"
+          p3.innerHTML="React is Popular Language"
+}
+
+function fun1()
+{
+    let allimg = document.getElementsByClassName("c1");
+
+    for(let i=0;i<allimg.length;i++)
+{
+    allimg[i].style.width="100px"
+}
+}
+
+function fun2()
+{
+            let pa= p1.innerHTML
+            let para1 = p2.innerHTML
+            let para2 = p3.innerHTML
+
+
+
+
+            p4.innerHTML=pa
+            p5.innerHTML=para1
+            p6.innerHTML=para2
+
+}
+</script>
+
+</body>
+</html>

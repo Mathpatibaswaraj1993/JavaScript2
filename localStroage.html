@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+    <input type="text" name="txt">
+    <input type="text" name="txt1">
+    <br>
+    <br>
+
+     <input type="button" value="Add data in localStorage storage" onclick="fun()">
+    <script>
+        // localStorage.setItem("Name","ABC")
+        // localStorage.setItem("Age",23)
+        // localStorage.setItem("city","Pune")
+
+
+        // let uname = localStorage.getItem("Name")
+        // console.log(uname)
+
+
+        // localStorage.removeItem("age")
+        // localStorage.clear()
+
+
+
+        // let object = {name:"Rohit",age:23,sal:45000}
+        // localStorage.setItem("user",JSON.stringify(object))
+
+
+        // let un = JSON.parse(localStorage.getItem("user"))
+        // console.log(un.name)
+
+
+        function fun()
+        {   localStorage.clear()
+            let fn = f1.txt.value
+            let sn = f1.txt1.value
+
+            localStorage.setItem("fn",fn)
+            localStorage.setItem("sn",sn)
+        }
+    </script>
+    </form>
+</body>
+</html>

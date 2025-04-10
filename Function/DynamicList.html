@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin: auto; width: 300px;"> 
+
+        
+        <button onclick="create()">Create List</button>
+        <ul id="list"></ul>
+            </div>
+            <script>
+                var colors=["red","blue","pink","purple","magenta","orange","green","skyblue","brown","yellow"]
+                let count=0;
+                let interval;
+                function create()
+                {
+                  interval=  setInterval(show,1000)
+                }
+                function show()
+                {   
+                    if(count<10){
+                        let newli = document.createElement("li")
+                         newli.innerHTML=colors[count]
+                         newli.style.color=colors[count]
+                         let newul = document.getElementById("list")
+                         newul.appendChild(newli)
+                         count++
+
+                    }
+                    else{
+                        alert("sorry ... List is Full Now...!!")
+                        clearInterval(interval)
+                    }
+
+                }
+                
+            </script>
+</body>
+</html>

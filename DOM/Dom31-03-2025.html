@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" class="c1">This is para one </p>
+    <h1 class="c1">This is heading one </h1>
+    <p id="p2" class="c1">This is para two </p>
+    <h1 class="c1">This is heading one </h1>
+    <p id="p3" class="c1">This is para three </p>
+
+
+    <button onclick="fun2()">Show All Html</button>
+    <button onclick="fun3()">Change style</button>
+    <button onclick="fun4()">Change style of All Para's</button>
+
+
+
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+
+
+    <script>
+        function fun2()
+        {
+            // let para = document.getElementById("p1").innerHTML
+            // let para1 = document.getElementById("p2").innerHTML
+            // let para2 = document.getElementById("p3").innerHTML
+
+
+            let para = p1.innerHTML
+            let para1 = p2.innerHTML
+            let para2 = p3.innerHTML
+
+
+
+
+            p4.innerHTML=para
+            p5.innerHTML=para1
+            p6.innerHTML=para2
+
+
+
+
+            // document.getElementById("p4").innerHTML=para
+            // document.getElementById("p5").innerHTML=para1
+            // document.getElementById("p6").innerHTML=para2
+        }
+
+
+        function fun3(){
+
+            let para = document.getElementById("p1")
+            para.style.color="red"
+            para.style.fontSize="30px"
+            para.style.fontFamily="monospace"
+            para.style.fontStyle="Uppercase"
+            para.style.border="13px  dotted blue"
+            para.style.padding="20px"
+            para.style.textAlign="center"
+
+           let para1 = document.getElementById("p2")
+           para1.style.color="green"
+           para1.style.fontSize="25px"
+           para1.style.fontFamily="monospace"
+           para1.style.fontStyle="Uppercase"
+           para1.style.border="13px  dotted gray"
+           para1.style.padding="15px"
+           para1.style.textAlign="center"
+
+
+           let para2 = document.getElementById("p3")
+           para2.style.color="yellow"
+           para2.style.fontSize="25px"
+           para2.style.fontFamily="monospace"
+           para2.style.fontStyle="Uppercase"
+           para2.style.border="13px  dotted pink"
+           para2.style.padding="15px"
+           para2.style.textAlign="center"
+        }
+
+        function fun4()
+        {
+            let allel = document.getElementsByClassName("c1")
+            for(let i=0;i<allel.length;i++)
+        {
+            allel[i].style.color="green"
+            allel[i].style.fontSize="25px"
+            allel[i].style.border="2px dotted blue"
+            allel[i].style.textAlign="center"
+            allel[i].style.backgroundColor="gray"
+
+        }
+        }
+    </script>
+
+
+</body>
+</html>

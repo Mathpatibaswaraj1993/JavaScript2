@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function yearleap(Year)
+        {
+
+           if((Year %4 === 0 && Year % 100 !==0)|| Year % 400 ===0) 
+        {
+            console.log(`This Year : ${Year} is a Leap `)
+        }  else
+        {
+            console.log(`This Year : ${Year} is not a Leap `)
+
+        }
+    }
+    yearleap(2025)
+        yearleap(2026)
+        yearleap(2022)
+        yearleap(2021)
+        yearleap(2020)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="para"></h3>
+    <script>
+        function display(msg)
+    {
+        document.getElementById("para").innerHTML=msg
+    }
+    function factorial(n, callback) {
+    if (n < 0) {
+        callback('Error: Factorial of a negative number is not defined');
+        return;
+    }
+    let num = 1;
+    for (let i = 2; i <= n; i++) {
+        num *= i;
+    }
+    callback(num);
+}
+
+factorial(7, function(num) {
+    console.log('Factorial:', num);
+});
+
+    </script>
+</body>
+</html>

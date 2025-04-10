@@ -20,7 +20,7 @@
 
 let arr=[]
 
-let count=prompt("Enter how many elements u wat to enter in an array")
+let count=prompt("Enter how many elements u want to enter in an array")
 
 for(let i=0;i<count;i++)
 {

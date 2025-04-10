@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    table{
+        border: 2px solid black;
+        padding: 20px;
+        margin: auto;
+         width: 600px;
+         color: rgb(81, 199, 199);
+         background-color:brown;
+         border-radius: 20px ;
+    }
+   </style>
+</head>
+<body>
+    <form name="form1">
+        <table>
+            <tr>
+                <td>Enter First Name:-</td>
+                <td><input type="number" name="f1"</td>
+            </tr>
+
+            <tr>
+                <td>Enter second Name:-</td>
+                <td><input type="number" name="f2"</td>
+            </tr>
+
+            <tr>
+                <td>Result :</td>
+                <td><input type="text" name="result"</td>
+            </tr>
+
+            <td></td>
+
+            <td>
+            <input type="button" value="Addition" onclick="add()">
+            <input type="button" value="Substration" onclick="sub()">
+            <input type="button" value="Multiplication" onclick="mul()">
+            <input type="button" value="Division" onclick="div()">
+            <input type="button" value="Clear" onclick="clearall()">
+        </td>
+        </table>
+    </form>
+
+    <script>
+        function add(){
+            var a = parseInt(form1.f1.value)
+            var b =  parseInt(form1.f2.value)
+            var c= a+b
+            form1.result.value=c
+
+        }
+        function sub(){
+            var a = parseInt(form1.f1.value)
+            var b =  parseInt(form1.f2.value)
+            var c = a-b
+            form1.result.value=c
+
+        }
+        function mul(){
+            var a = parseInt(form1.f1.value)
+            var b =  parseInt(form1.f2.value)
+            var c = a*b
+            form1.result.value=c
+
+        }
+        function div(){
+            var a = parseInt(form1.f1.value)
+            var b =  parseInt(form1.f2.value)
+            var c = a/b
+            form1.result.value=c
+        }
+
+        function clearall()
+        {
+            form1.f1.value=""
+            
+            form1.f2.value=""
+            
+            form1.result.value=""
+        }
+    </script>
+</body>
+</html>

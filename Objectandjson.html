@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- object --Means entity 
+    key and value pair structure
+    group of properties and function of entity -->
+<script>
+//     student= {
+//         rollno:1,
+//         marks:67,
+//         city:"Pune",
+//         age:23,
+//         college:"Garware"
+//     }
+//     console.log(student)
+//     console.log(student.city)
+//     console.log(student["city"]);
+
+
+
+//  Array of Object
+let studentInfo = [
+    {rno:1,name:"ABC",age:23},
+    {rno:2,name:"xyz",age:24},
+    {rno:3,name:"AAA",age:20},
+    {rno:4,name:"DDD",age:25}
+]
+
+// console.log(studentInfo)
+// console.log(studentInfo[1])
+// console.log(studentInfo[0].rno)
+// console.log(studentInfo[2].name)
+// console.log(studentInfo[3].age)
+
+
+let studentInfo1 = [
+    {rno:1,name:"ABC",age:23,city:"pune"},
+    {rno:2,name:"xyz",age:24,city:"Mumbai"},
+    {rno:3,name:"AAA",age:20,city:"Solapur"},
+    {rno:4,name:"DDD",age:25,city:"Latur"}
+]
+
+studentInfo1.map((e)=>{
+    console.log(`${e.rno} ${e.name} ${e.age}`)
+})
+
+
+let newArray = studentInfo1.map((e)=>{
+     e.age = e.age +10
+     return e 
+})
+console.log(newArray)
+
+
+let newArray1 = studentInfo1.filter((e)=>{
+    if(e.city!="pune")
+{
+    return e
+}
+})
+console.log(newArray1)
+
+
+
+
+let newArray2 = studentInfo1.map((e)=>{
+    e.name = e.name.toLocaleLowerCase()
+    return e
+})
+
+
+
+
+let result = studentInfo1.reduce((acc,e)=>acc+e.age,0)
+console.log(result)
+
+
+
+// JSON : Javascript object notation . Json file exchange FormData
+
+// key and value pair structure 
+
+
+// JSON.stringify() -- convert object into json string
+
+
+let jsonstr = '{"name":"john","age":24,"city":"Us","age":24}'
+let object = JSON.parse(jsonstr)
+
+let objstr ={name:"Blake",age:44,country:"UK"}
+
+let json1 = JSON.stringify(objstr)
+
+console.log(json1)
+
+console.log(object)
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

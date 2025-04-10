@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="create()">Create New Para</button>
+
+    <button onclick="createList()">Create Unordered List</button>
+
+    <button onclick="remove()">Remove</button>
+
+<script>
+    let para
+    function create()
+    {
+       para =document.createElement("p")
+       para.setAttribute("id","p1")
+        para.innerHTML="This is my new para"
+        document.body.appendChild(para)
+    }
+
+    function createList()
+    {
+        let fruits = prompt("Enter fruit Name")
+
+        let newul = document.createElement("ul")
+        let newli = document.createElement("li")
+        newli.innerText=fruits;
+        newul.appendChild(newli)
+        document.body.appendChild(newul)
+        // para.setAttribute("id","p2")
+
+     
+
+    }
+
+    function remove()
+    {
+        let p = document.getElementById("p1")
+        p.remove()
+      
+
+    }
+</script>
+</body>
+</html>

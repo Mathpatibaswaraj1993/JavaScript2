@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1" action="success.html" onsubmit=" return submithandle()">
+        <table align="center" padding="6">
+            <tr>
+                <td>User Name:</td>
+                <td><input type="text" autocomplete="off" name="uname" ></td>
+            </tr>
+              <tr>
+                <td></td>
+                <td id="err1"></td>
+              </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" autocomplete="off" name="email"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err2"></td>
+              </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" autocomplete="off" name="password" ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err3"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input type="submit"></td>
+              </tr>
+        </table>
+    </form>
+
+    <script>
+        function submithandle()
+        {
+            let uname=f1.uname.value
+            let email=f1.email.value
+            let pass=f1.password.value
+
+            if(!uname)
+        {
+            err1.innerHTML="<span style='color:red'>User Name is Required</span>"
+            return false
+        }
+        else
+        {
+            err1.innerHTML=""
+
+        }
+          
+
+        if(!email)
+        {
+            err2.innerHTML="<span style='color:red'>Email is Required</span>"
+            return false
+        }
+        else
+        {
+            err2.innerHTML=""
+
+        }
+
+        if(!pass)
+        {
+            err3.innerHTML="<span style='color:red'>Password is Required</span>"
+            return false
+        }
+        else
+        {
+            err3.innerHTML=""
+
+        }
+         
+        }
+    </script>
+</body>
+</html>

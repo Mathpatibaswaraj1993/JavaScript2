@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table
+    {
+        margin: auto;
+        padding: 20px;
+        width: 400px;
+        height: 400px;
+        border: 2px solid black;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+
+    }
+    .c1
+    {
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    }
+    #div1
+    {
+        margin: auto;
+        padding: 20px;
+        width: 400px;
+        height: 300px;    
+        border:2px solid green
+        
+        }
+</style>
+<body>
+    <form name="form1">
+        <table>
+            <tr>
+                <td>First Name:-
+                    <input type="text" name="f1">
+                </td>
+            </tr>
+            <tr>
+                <td>last Name:-
+                    <input type="text" name="f2">
+                </td>
+            </tr>
+            <tr>
+                <td>Email:-
+                    <input type="email" name="f3">
+                </td>
+            </tr>
+            <tr>
+                <td>Password:
+                    <input type="password" name="f4">
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="fun()">User Info</button></td>
+            
+            </tr>
+        </table>
+    </form>
+    <br>
+    <div id="div1"> 
+         <h3  id="hed5" class="c1">UserInfo</h3>
+           <h2 id ="hed1" class="c1"></h2>
+           <h2 id="hed2" class="c1" ></h2>
+           <h2 id="hed3" class="c1" ></h2>
+           <h2 id="hed4" class="c1" ></h2>
+        </div>
+
+
+    <script>
+        // function fun()
+        // {
+        //     var a =(form1.f1.value)
+        //     var b =(form1.f2.value)
+        //     var c =(form1.f3.value)
+        //     var d= (form1.f4.value)
+
+        //     hed1.innerHTML=a
+        //     hed2.innerHTML=b
+        //     hed3.innerHTML=c
+        //     hed4.innerHTML=d
+        // }
+
+
+
+        function fun()
+        {
+            let a = document.forms["form1"]
+            let text = "";
+            for (let i=0;i<a.length;i++)
+        {
+            text +=a.elements[i].value + " <br> ";
+        }
+document.getElementById("hed5").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

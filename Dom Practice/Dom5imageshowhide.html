@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+        <table>
+            <tr></tr>
+        </table>
+    </form>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Image in DOM</title>
+    <style>
+        .myImage{
+            margin: auto;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <img id="myImage" style="display: none; width: 300px; height: 200px;border: 2px solid green; border-radius: 40px; box-shadow: 10px   yellow;">
+    </div>
+    <br>
+    <button onmouseover ="showImage()" onmouseout="hideimage()">Show Image</button>
+
+    <script>
+        function showImage() {
+            let img = document.getElementById("myImage");
+            img.src = "/Images/starbucks2coffee.jpeg"; // Set image source
+            img.style.display = "block"; // Make image visible
+        }
+        function hideimage()
+        {
+            let img = document.getElementById("myImage");
+            img.src = "/Images/Tacos.jpeg"; // Set image source
+            img.style.display = "display"; // Make image visible
+        }
+    </script>
+
+</body>
+</html>

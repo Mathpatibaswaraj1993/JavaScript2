@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         function timeofday(hour)
+         {
+            // let hour;
+            if(hour >=5 && hour<=11){
+                console.log("Good Morning");
+            }
+           else if(hour >=12 && hour<=16){
+                console.log("Good Afternoon");
+            }
+            else if(hour >=17 && hour<=19){
+                console.log("Good Afternoon");
+            }
+            else if((hour >=20 && hour<=23) && (hour >= 0 && hour<=4)){
+                console.log("Good night");
+            }else
+            {
+                console.log("Invalid Hour. Please Enter a number between 0 and 11")
+            }
+         }
+timeofday(6)
+timeofday(1)
+    </script>
+
+</body>
+</html>

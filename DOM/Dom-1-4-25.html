@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" class="c1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio delectus ullam esse tenetur? Eius voluptates beatae distinctio maiores sapiente obcaecati doloremque ut temporibus quas. Explicabo, soluta totam. Impedit, inventore accusantium.</p>
+    <h1 id="hed" class="c1">
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h1>
+    <p id="p2" class="c1">Javascript is scripting language</p>
+    <button onclick="get()">Click Me</button>
+    <script>
+      function get()
+      {
+        let para = document.querySelector(".c1").innerHTML
+        alert(para)
+
+
+        // let ele = document.querySelectorAll(".c1")
+        // alert(ele[0].innerHTML)
+        // alert(ele[1].innerHTML)
+        // alert(ele[2].innerHTML)
+
+      }
+    </script>
+</body>
+</html>

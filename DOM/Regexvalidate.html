@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1" action="success.html" onsubmit="return submitHandle()">
+        <table align="center" padding="6">
+            <tr>
+                <td>User Name:</td>
+                <td><input type="text" autocomplete="off" name="uname" ></td>
+                 <td id="uerr"></td>
+            </tr>
+              <tr>
+                <td></td>
+                <td id="err1" style="color: green; font-size: 10px;">first letter should be capital and min length2 and max len 6</td>
+              </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" autocomplete="off" name="email"></td>
+                 <td id="errr1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err2" style="color: red; font-size: 10px;">You should write the email using @ .</td>
+              </tr>
+              <tr>
+                <td>Mobile Number :-</td>
+                <td><input type="number" name="mno" autocomplete="off" ></td>
+                <td id="monumber" ></td>
+
+            </tr>
+           
+            <tr>
+                <td></td>
+                <td id="err3" style="color: green; font-size: 10px;">You should Enter 10 Digit Mobile no.</td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" autocomplete="off" name="pwl" ></td>
+                 <td id="errr3"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="err4" style="color: red; font-size: 10px;">Enter the Password in between using any symbol</td>
+              </tr>
+
+             
+              <tr>
+                <td></td>
+                <td><input type="submit" ></td>
+              </tr>
+        </table>
+    </form>
+
+    <script>
+        function submitHandle()
+        {
+            let un = f1.uname.value
+            let em = f1.email.value
+            let mo = f1.mno.value
+            let pas = f1.pwl.value
+             alert(pas)
+
+            let upattern=/^([A-Z]{1,1})+([a-z]{2,6})$/;
+            let epatt=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+            let mop=/^([789]{1,1})+([0-9]{9,9})$/
+            let pa=/^([a-zA-Z0-9@#$%&*]{2,9})+([@#$%&*]{1,1})+([a-zA-Z0-9@#$%&*]{3,10})$/
+
+
+            if(un.match(upattern))
+        {
+           uerr.innerHTML=`<img src='correct.jpg' width='30px' height='30px'>`
+          
+        }
+        else
+        {
+            uerr.innerHTML=`<img src='wrong.jpg' width='30px' height='30px'>`
+            f1.uname.value=""
+            f1.uname.focus()
+            return false
+        }
+          
+         
+        if(em.match(epatt))
+        {
+          errr1.innerHTML=`<img src='correct.jpg' width='30px' height='30px'>`
+        
+
+        }
+        else
+        {
+          errr1.innerHTML=`<img src='wrong.jpg' width='30px' height='30px'>`
+          f1.email.value=""
+          f1.email.focus()
+          return false
+        }
+         
+        if(mo.match(mop))
+        {
+          monumber.innerHTML=`<img src='correct.jpg' width='30px' height='30px'>`
+          // return false
+
+
+        }
+        else{
+          monumber.innerHTML=`<img src='wrong.jpg' width='30px' height='30px'>`
+          f1.mno.value=""
+          f1.mno.focus()
+          return false
+        }
+     
+        if(!pa.match(pas))
+        {
+          errr3.innerHTML=`<img src='wrong.jpg' width='30px' height='30px'>`
+          f1.pwl.value=""
+          f1.pwl.focus()
+          return false
+          
+          //return false
+        }
+        else
+        {
+
+          errr3.innerHTML=`<img src='correct.jpg' width='30px' height='30px'>`
+
+          
+        }
+             
+        }
+    </script>
+</body>
+</html>

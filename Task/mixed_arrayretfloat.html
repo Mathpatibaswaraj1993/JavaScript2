@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mixed_array(a)
+        {
+
+            let emptyArr = []
+
+            for(let i of a)
+        {
+
+            if(typeof (i) == "number" && !Number.isInteger(i))
+        {
+
+                     emptyArr.push(i)
+        }
+        }
+        return emptyArr
+
+        }
+        let arr =[3,4,5.6,"Bengaluru",78.90,true,null,3.89]
+
+       console.log(mixed_array(arr))
+    </script>
+</body>
+</html>

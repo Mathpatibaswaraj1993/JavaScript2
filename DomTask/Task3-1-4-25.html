@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1" class="c2">This is Headig H1</h1>
+    <span id="sp1" class="c2">This is Javascript language</span>
+    <h3 id="h3" class="c2">This is Heading H3</h3>
+
+    <button onclick="add()">Change all style Elements</button>
+    <script>
+    function add()
+    {
+       let para = document.querySelectorAll(".c2")
+
+        for (let i=0;i<para.length;i++)
+    {
+      para[i].style.fontSize="10px"
+      para[i].style.color="green"
+      para[i].style.FontFamily="monospace"
+      para[i].style.fontStyle="Uppercase"
+      para[i].style.border="5px  dotted pink"
+      para[i].style.padding="15px"
+
+    }
+
+    }
+    </script>
+</body>
+</html>

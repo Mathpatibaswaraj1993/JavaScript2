@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkvowelorcono()
+        {
+            let char =prompt("Enter any string")
+            char = char.toLowerCase();
+
+            let vowels = ['a','e','i','o','u']
+
+            if(vowels.includes(char))
+        {
+            console.log("Vowel");
+        }else if(char >= 'a' && char <='z')
+        {
+            console.log("Conosanat")
+        }else{
+            console.log("Invalid input")
+        }
+
+        }
+        checkvowelorcono()
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table align="center" padding="6">
+            <tr>
+                <td>User Name:</td>
+                <td><input type="text" autocomplete="off" name="uname" onfocus="focusfun()" onblur="blurfun()"></td>
+                <td id="msg1"></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" autocomplete="off" name="email" onfocus="focusfun1()" onblur="blurfun1()"></td>
+                <td id="msg2"></td>
+
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" autocomplete="off" name="password" onfocus="focusfun2()" onblur="blurfun2()"></td>
+                <td id="msg3"></td>
+
+            </tr>
+        </table>
+    </form>
+
+    <script>
+              function focusfun()
+              {
+                msg1.innerHTML=`<span style='color:red'>Enter User Name</span>`
+              }
+            function    blurfun()
+              {
+                 msg1.innerHTML=""
+              }
+
+              function focusfun1()
+              {
+                msg2.innerHTML=`<span style='color:red'>Enter Email id</span>`
+              }
+                function    blurfun1()
+              {
+                 msg2.innerHTML=""
+              }
+
+              function focusfun2()
+              {
+                msg3.innerHTML=`<span style='color:red'>Enter Password</span>`
+              }
+          function    blurfun2()
+              {
+                 msg3.innerHTML=""
+              }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p id="p1">This is my para</p>
+    <p id="p2">This is prara two</p>
+    <p id="p3">This is prara three</p>
+
+    <h1 onmouseover="fun1()" id="hed">This is heading one </h1>
+    <button onclick="fun()">Click Me</button>
+    <script>
+        //Event onclick ,onmouseover,
+       function fun(){
+         let para = document.getElementById("p1").innerHTML
+         alert(para)
+    //    alert("Clicked Event me ")
+        }
+
+        fun()
+
+        // function fun1()
+        // {
+        //     alert("mouse over of the h1")
+        // }
+        // fun1()
+    </script>
+</body>
+</html>

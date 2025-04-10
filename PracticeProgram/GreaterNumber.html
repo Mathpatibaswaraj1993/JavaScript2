@@ -7,18 +7,22 @@
 </head>
 <body>
     <script>
-           let number=parseInt(prompt("Enter the number"))
+           let number=parseInt(prompt("Enter the number1"))
   
-           let number2=parseInt(prompt("Enter the number"))
+           let number2=parseInt(prompt("Enter the number2"))
 
 
 
         if(number>number2){
             document.write(`Number one is greater:  ${number}`)
-        }else{
-            document.write(`Number2 two is greater : ${number2}`)
-
+        }else if (number2>number){
+            document.write(`Number Two  is greater : ${number2}`)
         }
+            
+else{
+        document.write(`Both number are ${number} and ${number2} equals`)
+}
+        
     </script>
 </body>
 </html>
