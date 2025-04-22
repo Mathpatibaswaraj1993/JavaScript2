@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cart = []
+
+        function addItemCart(item)
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    cart.push(item)
+                    console.log(`${item} is added into cart`)
+                    resolve(item)
+                },7000)
+            })
+        }
+
+        function calculateTotal(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    let total = cart.length * 1000
+                    console.log(`Total Amount ${total} `)
+                    resolve (total)
+                },4000)
+            })
+        }
+
+        function processPayment (amount){ 
+            return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                    if(amount >0)
+                    {
+                        console.log(`Payment was Successfully ${amount} done`)
+                        resolve("Payment Successfully Done!!")
+                      } 
+                       else{
+                        reject("Invalid Amount!!")
+                    }
+                },3000)
+            })
+
+        }
+
+        async function  shoppingcart()
+        {
+          try {
+            const item1 = await addItemCart("Jeans")
+            cart.push.item1;
+
+            const item2 = await addItemCart("shirt")
+            cart.push.item2;
+
+            const total1 = await calculateTotal (cart);
+            console.log("total:-"+total1);
+            
+
+            const paymentResult = await processPayment (total1);
+
+            console.log("Order Complete"), paymentResult
+          } catch (error){
+            console.error("Error is Checkout:",error)
+          }
+          
+        }
+
+        shoppingcart()
+            </script>
+</body>
+</html>
