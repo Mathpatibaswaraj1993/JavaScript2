@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <p id="p1">This is Actual paragraph</p>
+
+
+<button type="button" onclick="fun()">Change para text</button>
+<button type="button" onclick="fun1()">Add css on Para</button>
+<button type="button" onclick="fun2()">Change background Color</button>
+<button type="button" onclick="fun3()">Add New List</button>
+
+
+
+    <script>
+        function fun() {
+            var p = document.getElementById("p1");
+            p.innerHTML = "This is changed paragraph";
+        }
+        // The above code will change the text of the paragraph with id "p1" to "This is changed paragraph" when the button is clicked.
+    
+             function fun1() {
+            var p = document.getElementById("p1");  
+            p.style.color = "red"; // Change text color to red
+            p.style.fontSize = "20px"; // Change font size to 20px
+            p.style.fontWeight = "bold"; // Make text bold
+            p.style.backgroundColor = "yellow"; // Change background color to yellow
+            p.style.border = "2px solid black"; // Add a black border
+            p.style.padding = "10px"; // Add padding around the text
+            p.style.borderRadius = "5px"; // Round the corners of the border    
+
+             }
+        // The above code will change the text color to red, font size to 20px, make it bold, change background color to yellow, add a black border, padding around the text, and round the corners of the border when the button is clicked.
+        // This will make the paragraph look more visually appealing.
+
+        function fun2() {
+            var body1 = document.getElementById("body");
+            body.style.backgroundColor = "lightblue"; // Change background color of the body to light blue
+        }
+        // The above code will change the background color of the body to light blue when the button is clicked.    
+
+
+        function fun3() {
+            let itemCount = 1;
+
+            var ul = document.createElement("ul"); // Create a new unordered list element
+            var li = document.createElement("li"); // Create a new list item element
+            li.appendChild(document.createTextNode(`new Item : ${itemCount}`)); // Add text to the list item
+            ul.appendChild(li); // Append the list item to the unordered list
+            document.body.appendChild(ul); // Append the unordered list to the body of the document
+        }
+        // The above code will create a new unordered list with one list item containing the text "New List Item" and append it to the body of the document when the button is clicked.
+        // You can add more list items by repeating the process inside the fun3 function.
+
+  
+    </script>
+</body>
+</html>
